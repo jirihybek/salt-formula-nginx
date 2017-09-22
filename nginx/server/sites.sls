@@ -96,6 +96,8 @@ sites-available-{{ site_name }}:
   - source: salt://nginx/files/static.conf
   {%- elif site.type == 'nginx_stats' %}
   - source: salt://nginx/files/stats.conf
+  {%- elif site.type == 'nginx_advanced' %}
+  - source: salt://nginx/files/advanced.conf
   {%- else %}
   - source: salt://{{ site.type }}/files/nginx.conf
   {%- endif %}
